@@ -1,0 +1,59 @@
+/*
+    Created on : Mar 10, 2016, 9:20:02 AM
+    Author     : ibwolter
+*/
+body { background-color: #ECECEC; }
+ 
+.blue-dark { background: #165D8B; color: #fff  }
+.blue-light { background: #165D8B  }
+.gray-light { background: #E9F3EF }
+
+/* Paddings */
+.pad-1 { padding: 1em }
+.pad-0-6 { padding: 0.6em }
+
+.bloco { border-radius: 6px; margin-top: 6%; background: #fff; border: 1px solid #ccc; padding: 4em; }
+label { font-weight: 500; font-size: 16px;  color: #165D8B }
+
+input { margin-bottom: 1em; background: #F9F9F9!important; border: 1px solid #CACACA!important }
+textArea, select { margin-bottom: 1em; background: #F9F9F9!important; border: 1px solid #CACACA!important }
+h3.text-center {     color: #165D8B!important;
+    border-bottom: 5px solid  #165D8B;
+    width: auto;
+    margin: 0 auto;
+    padding: 0.2em;
+}
+
+#logotipo { opacity: 0 }
+select[multiple], select[size] { height: 215px; padding: 0; }
+
+/* Formulário passos */
+/*.passo1, .passo2, .passo3, .proximo2,.proximo3, .concluir { display: none;  } */
+/*.passo1, .passo2, .passo3 { position:relative; top:-650px } */
+/* Estados */
+.none { display: none }
+
+/* Margins */
+.mr-05{ margin-right: 0.5em; }    
+
+/* Alertas */
+.alerta{ display:none; }
+
+
+/* Validação */
+@media only screen and (max-width: 400px) {
+  .bloco {
+    padding: 4em 0!important;
+  }
+}
+
+/*
+.selecionado { background: red }
+option {  padding: 0.2em 0.5em }
+small.pequeno { font-size: 12px; color: #165D8B }
+*/
+
+.selecionado { background: red }
+option {  padding: 0.2em 0.5em }
+small.pequeno { font-size: 12px; color: #165D8B }
+.quanto { width: auto; display: block; float: left }

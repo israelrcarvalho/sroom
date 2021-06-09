@@ -1,0 +1,60 @@
+
+
+.ajuste-check{
+    margin:  3% 0 3% 0;
+}
+
+.ajuste-check-externo{
+    margin:  3% 0 5% 0;
+}
+
+.form-control.text-desc-evento{
+    height: 70px;
+
+}
+
+.form-control.text-obs-evento{
+    height: 70px;
+    max-height: 50% !important;
+}
+
+.quebra-btn{
+     margin-top: 20px; 
+     border-top: 1px solid #eee;
+}
+
+.ajuste-btn-salvar{
+    float: right;
+    margin-bottom: 10%;
+    margin-top: 1% !important;
+}
+.ajuste-btn-cancelar{
+    float: left;
+    margin-bottom: 10%;
+    margin-top: 1% !important;
+}
+
+.menu-horizontal {
+    color: #ffffff;
+}
+
+.dropdown .nav>li>a:hover {
+    background-color: #00aced;
+}
+
+
+a.dropdown-toggle.menu-horizontal{
+    padding-left: 7px !important;
+    -webkit-transition:	all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+a.dropdown-toggle.menu-horizontal:hover {
+    background: #92CBBD;
+    -webkit-transition:	all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}

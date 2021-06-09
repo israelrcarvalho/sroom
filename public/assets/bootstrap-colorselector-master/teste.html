@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bootstrap-colorselector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link href="lib/bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+<link href="lib/bootstrap-colorselector-0.2.0/css/bootstrap-colorselector.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+      <div class="bs-docs-example">
+        <select id="colorselector_2">
+          <option value="106" data-color="#A0522D">sienna</option>
+          <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
+          <option value="87" data-color="#FF4500">orangered</option>
+          <option value="17" data-color="#008B8B">darkcyan</option>
+          <option value="18" data-color="#B8860B">darkgoldenrod</option>
+          <option value="68" data-color="#32CD32">limegreen</option>
+          <option value="42" data-color="#FFD700">gold</option>
+          <option value="77" data-color="#48D1CC">mediumturquoise</option>
+          <option value="107" data-color="#87CEEB">skyblue</option>
+          <option value="46" data-color="#FF69B4">hotpink</option>
+          <option value="47" data-color="#CD5C5C">indianred</option>
+          <option value="64" data-color="#87CEFA">lightskyblue</option>
+          <option value="13" data-color="#6495ED">cornflowerblue</option>
+          <option value="15" data-color="#DC143C">crimson</option>
+          <option value="24" data-color="#FF8C00">darkorange</option>
+          <option value="78" data-color="#C71585">mediumvioletred</option>
+          <option value="123" data-color="#000000">black</option>
+        </select> <br />
+        <button class="btn" type="button" id="setColor">set by color (#008B8B)</button>
+        <button class="btn" type="button" id="setValue">set by value (18)</button>
+        <input type="text" id="colorValue" /> <input type="text" id="colorColor" /> <input type="text" id="colorTitle" />
+      </div>
+	  
+
+  <!-- scripts -->
+  <script src="http://localhost/apps/eventos-fiec/bootstrap-colorselector-master/lib/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+  <script src="http://localhost/apps/eventos-fiec/bootstrap-colorselector-master/lib/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+  <script src="http://localhost/apps/eventos-fiec/bootstrap-colorselector-master/lib/bootstrap-colorselector-0.2.0/js/bootstrap-colorselector.js"></script>
+  <script src="http://localhost/apps/eventos-fiec/bootstrap-colorselector-master/lib/google-code-prettify/prettify.js"></script>
+
+  <script>
+      $(function() {
+
+        window.prettyPrint && prettyPrint();
+
+        $('#colorselector_1').colorselector();
+        $('#colorselector_2').colorselector({
+          callback : function(value, color, title) {
+            $("#colorValue").val(value);
+            $("#colorColor").val(color);
+            $("#colorTitle").val(title);
+          }
+        });
+
+        $("#setColor").click(function(e) {
+          $("#colorselector_2").colorselector("setColor", "#008B8B");
+        })
+
+        $("#setValue").click(function(e) {
+          $("#colorselector_2").colorselector("setValue", 18);
+        })
+
+      });
+    </script>
+</body>
+</html>

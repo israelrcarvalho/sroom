@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!--    <base href="http://getic06/allan/scheduled-room/"/>-->
+
+        <title>Schedule Room</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <!--<script src="js/jquery.validate.js" type="text/javascript"></script>-->
+        <script src="js/jquery.validate.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/mask.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- Cabeçalho -->
+        <div class="col-lg-12 blue-dark pad-0-6 navbar-fixed-top">
+            <div class="container">
+                <div class="col-lg-offset-4 col-lg-4 img-responsive">
+                    <div class="container-fluid" id="logotipo">
+                        <img src="images/Logo.png" alt="" class="img-responsive"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulários -->
+        <div class="container validate bloco">
+            <!-- form aqui -->
+            <form method="POST"  id="formulario" action="" class="form-horizontal"  accept-charset="UTF-8"><input name="_token" type="hidden" value="NX8wjSvW3OaihrEudTlSoKTGsL1Ez1XPyCcQ1P4t">
+
+                <!-- Descrição do Evento -->
+                <div class="row">
+                    <h3 class="text-center"><b class="glyphicon glyphicon-paperclip" aria-hidden="true"></b> Solicitação de Reserva</h3>
+                    <hr>
+                    
+                    <!-- Primeira coluna -->
+                    <div class="col-sm-6">
+
+                        <label class="control-label" for="evento">Nome do Evento </label>
+                        <input type="text" class="form-control" id="evento" name="evento" placeholder="Digite o nome do evento" />
+
+                        <label class="control-label" for="solicitante">Nome do Solicitante</label>
+                        <input type="text" class="form-control" id="solicitante" name="solicitante" placeholder="Digite o nome do solicitante" />
+
+                        <label class="control-label" for="telefone">Telefone</label>
+                        <input type="text" class="form-control fone" id="telefone" name="telefone" placeholder="Digite seu telefone" />
+
+                        <label class="control-label" for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu email" />
+                       
+                        <label for="recursos">Recursos: <small class="pequeno">(Segure o CTRL para multiplas seleções)</smal></label>
+                        <select name="recursos[]" id="recursos" class="form-control" multiple>
+                            <option  value="MULTIM&Iacute;DIA">
+                                MULTIM&Iacute;DIA
+                            </option>
+                            <option  value="RETROPROJETOR">
+                                RETROPROJETOR
+                            </option>
+                            <option  value="GRAVA&Ccedil;&Atilde;O">
+                                GRAVA&Ccedil;&Atilde;O
+                            </option>
+                            <option  value="VIDEO CASSETE">
+                                VIDEO CASSETE
+                            </option>
+                            <option  value="TV">
+                                TV
+                            </option>
+                            <option  value="VIDEOCONFERENCIA">
+                                VIDEOCONFERENCIA
+                            </option>
+                            <option  value="FLIPCHART">
+                                FLIPCHART
+                            </option>
+                            <option  value="TRANSMISS&Atilde;O">
+                                TRANSMISS&Atilde;O
+                            </option>
+                            <option  value="CAF&Eacute;, &Aacute;GUA E BISCOITOS, SUCOS">
+                                CAF&Eacute;, &Aacute;GUA E BISCOITOS, SUCOS
+                            </option>
+                            <option  value="CAF&Eacute; E &Aacute;GUA">
+                                CAF&Eacute; E &Aacute;GUA
+                            </option>
+                            <option  value="ESPA&Ccedil;O PARA COFFEE BREAK/COQUETEL">
+                                ESPA&Ccedil;O PARA COFFEE BREAK/COQUETEL
+                            </option>
+                            <option  value="COFFEE BREAK">
+                                COFFEE BREAK
+                            </option>
+                            <option  value="COQUETEL">
+                                COQUETEL
+                            </option>
+                            <option  value="Sem recurso">
+                                Sem recurso
+                            </option>
+                        </select>
+
+                    </div>
+
+                     <!-- Segunda coluna -->
+                    <div class="col-sm-6">
+                        
+                            <label class="control-label" for="num_participantes">N&uacute;mero de Participantes:</label>
+                            <input class="form-control required numeric" id="h_fim" name="num_participantes" type="number">
+                       
+                            <label class="control-label" for="layout_espaco">Nome da Instituição</label>
+                            <select class="form-control" id="instituicao" name="instituicao">
+                                <option value="">- Selecione -</option>
+                                <option value="1">FIEC</option>
+                                <option value="2">SESI</option>
+                                <option value="3">SENAI</option>
+                                <option value="4">IEL</option>
+                                <option value="5">SINDICATO</option>
+                            </select>
+
+                            <label class="control-label" for="layout_espaco">Unidade / Sindicato:</label>
+                            <select class="form-control" id="instituicao" name="instituicao">
+                                <option value="">- Selecione -</option>
+                                <option value="1">GETIC</option>
+                                <option value="2">GERHU</option>
+                            </select>
+                            
+                            <label class="control-label" for="layout_espaco">Layout do Espaço:</label>
+                            <select class="form-control" id="layout_espaco" name="layout_espaco"><option value="1">Formato U
+                                </option><option value="2">Audit&oacute;rio
+                                </option><option value="3">Espinha de Peixe
+                                </option><option value="4">Sala de Aula</option></select>
+
+                            <label class="control-label" for="descricao">Descrição do Evento</label>
+
+                            <textarea class="form-control text-desc-evento" id="ccomment" name="comment" required placeholder="Escreva uma descri&ccedil;&atilde;o para o evento" name="descricao" cols="50" rows="10" id="descricao"></textarea>
+                       
+                    </div>
+
+                </div>
+                <input class="form-control" name="cadastrado_por" type="hidden" value="3">
+
+                <!-- Período  -->
+                <div class="row" style="margin-top: 6%">
+                    
+
+                    <h3 class="text-center"><b class="glyphicon glyphicon-calendar" aria-hidden="true"></b> Período</h3>
+                    <hr>
+
+                    <div class="col-sm-1"></div>
+                    <div class="form-group col-sm-2">
+                        <label class="control-label" for="dt_realizar_inicio">Data In&iacute;cio:</label>
+                        <input class="form-control required data" id="dt_realizar_inicio" name="dt_realizar_inicio" type="text" placeholder="__/__ /____">
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                    <div class="form-group col-sm-2 ">
+
+                        <label class="control-label" for="h_inicio">Hora In&iacute;cio:</label>
+                        <input class="form-control hora" id="h_inicio" name="h_inicio" type="time" name="hour" placeholder="hh:mm">
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                    <input name="dt_solicitacao" type="hidden">
+
+                    <div class="form-group col-sm-2">
+                        <label class="control-label" for="dt_realizar_fim">Data Fim:</label>
+                        <input class="form-control required data" id="dt_realizar_fim" name="dt_realizar_fim" type="text" placeholder="__/__ /____">
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                    <div class="form-group col-sm-2">
+                        <label class="control-label" for="h_fim">Hora Fim:</label>
+                        <input class="form-control hora" type="time" id="h_fim" name="h_fim"  placeholder="hh:mm">
+                    </div>
+
+                </div>
+
+
+                <hr>
+                    <!-- buttons -->
+                    <div class="col-md-12 proximo3">
+                        <button class="submit btn btn-primary pull-right" >Concluir <b class="glyphicon glyphicon glyphicon-check"></b></button>
+                    </div>    
+
+                    <!-- buttons -->
+   
+
+            <script>
+                /* Validação de formulários */
+                $("#formulario").validate({
+                    rules: {
+                        evento: "required",
+                        solicitante: "required",
+                        telefone: {
+                            required: true,
+                            minlength: 2
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        descricao: {
+                            required: true,
+                            minlength: 2
+                        },
+                    },
+                    messages: {
+                        evento: "Por favor digite o nome do evento",
+                        solicitante: "Digite o nome do solicitante",
+                        telefone: {
+                            required: "Digite o número de telefone",
+                            minlength: "Your username must consist of at least 2 characters"
+                        },
+                        email: "Por favor escreva um número de telefone valido",
+                        descricao: "Descreva o evento"
+                    },
+                    errorElement: "em",
+                    errorPlacement: function (error, element) {
+                        // Add the `help-block` class to the error element
+                        error.addClass("help-block");
+
+                        // Add `has-feedback` class to the parent div.form-group
+                        // in order to add icons to inputs
+                        element.parents(".col-sm-5").addClass("has-feedback");
+
+                        if (element.prop("type") === "checkbox") {
+                            error.insertAfter(element.parent("label"));
+                        } else {
+                            error.insertAfter(element);
+                        }
+
+                        // Add the span element, if doesn't exists, and apply the icon classes to it.
+                        if (!element.next("span")[ 0 ]) {
+                            $("<span class='glyphicon glyphicon-remove form-control-feedback'></span>").insertAfter(element);
+                        }
+                    },
+                    success: function (label, element) {
+                        // Add the span element, if doesn't exists, and apply the icon classes to it.
+                        if (!$(element).next("span")[ 0 ]) {
+                            $("<span class='glyphicon glyphicon-ok form-control-feedback'></span>").insertAfter($(element));
+                        }
+                    },
+                    highlight: function (element, errorClass, validClass) {
+                        $(element).parents(".col-sm-6").addClass("has-error").removeClass("has-success");
+                        $(element).next("span").addClass("glyphicon-remove").removeClass("glyphicon-ok");
+                    },
+                    unhighlight: function (element, errorClass, validClass) {
+                        $(element).parents(".col-sm-6").addClass("has-success").removeClass("has-error");
+                        $(element).parents(".col-sm-2").addClass("has-success").removeClass("has-error");
+                        $(element).next("span").addClass("glyphicon-ok").removeClass("glyphicon-remove");
+                    }
+                });
+
+            </script>
+    </body>
+
+</html>
